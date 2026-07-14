@@ -42,7 +42,7 @@ const EMPTY_FORM = {
 };
 
 const LogInteractionScreen = () => {
-  const [messages, setMessages] = useState(DUMMY_MESSAGES);
+  const [messages, setMessages] = useState([]);
 
   const [formData, setFormData] = useState(EMPTY_FORM);
 
