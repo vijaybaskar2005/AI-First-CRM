@@ -27,6 +27,8 @@ DATABASE_URL = (
 engine = create_engine(
     DATABASE_URL,
     echo=settings.DEBUG,
+    pool_pre_ping=True,
+    pool_recycle=300,
     connect_args={
         "ssl": {}
     }
