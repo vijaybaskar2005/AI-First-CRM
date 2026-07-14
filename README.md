@@ -5,9 +5,9 @@ An AI-powered Customer Relationship Management (CRM) system built for Medical Re
 Instead of manually filling lengthy forms, the Medical Representative simply chats with the AI Assistant. The LangGraph AI Agent understands the conversation, extracts the interaction details, fills the CRM form automatically, and provides intelligent recommendations.
 ---
 ## Live Demo
-
 https://ai-first-crm-beryl.vercel.app/
 
+**Note:** During the first use, AI-powered features such as automatic form filling, interaction logging, and follow-up recommendations may take **1–2 minutes** to respond while the backend initializes. After the initial request, subsequent operations are typically completed within a few seconds.
 ## GitHub Repository
 
 https://github.com/vijaybaskar2005/AI-First-CRM
