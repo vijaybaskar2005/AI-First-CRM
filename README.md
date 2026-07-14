@@ -7,7 +7,7 @@ Instead of manually filling lengthy forms, the Medical Representative simply cha
 ## Live Demo
 https://ai-first-crm-beryl.vercel.app/
 
-**Note:** During the first use, AI-powered features such as automatic form filling, interaction logging, and follow-up recommendations may take **1–2 minutes** to respond while the backend initializes. After the initial request, subsequent operations are typically completed within a few seconds.
+**Note:** During the first use, AI-powered features such as automatic form filling, interaction logging,follow-up recommendations,etc may take **1–2 minutes** to respond while the backend initializes. After the initial request, subsequent operations are typically completed within a few seconds.
 ## GitHub Repository
 
 https://github.com/vijaybaskar2005/AI-First-CRM
