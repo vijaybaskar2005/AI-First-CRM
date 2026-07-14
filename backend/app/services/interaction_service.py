@@ -9,7 +9,7 @@ from sqlalchemy import or_
 
 from app.models.interaction import Interaction
 from app.models.hcp import HCP
-
+from sqlalchemy import func
 from app.schemas.interaction import (
     InteractionCreate,
     InteractionUpdate,
@@ -94,7 +94,10 @@ def search_by_doctor(db: Session, doctor_name: str):
     return (
         db.query(Interaction)
         .join(HCP, Interaction.hcp_id == HCP.id)
-        .filter(HCP.doctor_name.ilike(f"%{doctor_name}%"))
+        .filter(
+            func.lower(HCP.doctor_name)
+            .contains(doctor_name.lower())
+        )
         .all()
     )
 

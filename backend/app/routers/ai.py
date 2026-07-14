@@ -53,7 +53,17 @@ def save_interaction_ai(
     db: Session = Depends(get_database),
 ):
 
-    doctor_name = payload.get("doctor_name")
+    doctor_name = payload.get("doctor_name", "")
+
+    doctor_name = (
+        doctor_name
+        .replace("Doctor", "")
+        .replace("doctor", "")
+        .replace("Dr.", "")
+        .replace("Dr", "")
+        .strip()
+    )
+
     hospital = payload.get("hospital")
 
     doctor = hcp_service.get_hcp_by_name(

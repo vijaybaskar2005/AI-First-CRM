@@ -101,6 +101,16 @@ def process_search_interaction(state: AgentState):
     try:
 
         doctor_name = search_result["value"]
+
+        doctor_name = (
+            doctor_name
+            .replace("Doctor", "")
+            .replace("doctor", "")
+            .replace("Dr.", "")
+            .replace("Dr", "")
+            .strip()
+        )
+
         print("Searching doctor:", doctor_name)
         interactions = (
             interaction_service.get_interactions_by_doctor_name(
