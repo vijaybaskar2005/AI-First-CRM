@@ -26,7 +26,10 @@ DATABASE_URL = (
 
 engine = create_engine(
     DATABASE_URL,
-    echo=settings.DEBUG
+    echo=settings.DEBUG,
+    connect_args={
+        "ssl": {}
+    }
 )
 
 SessionLocal = sessionmaker(
