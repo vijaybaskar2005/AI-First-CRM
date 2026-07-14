@@ -3,7 +3,7 @@ import axios from "axios";
 import LogInteractionForm from "../components/LogInteractionForm";
 import AIChatPanel from "../components/AIChatPanel";
 import "../styles/logInteraction.css";
-
+const API_URL = import.meta.env.VITE_API_URL;
 // Dummy seed data
 const DUMMY_MESSAGES = [
   {
@@ -65,7 +65,7 @@ const LogInteractionScreen = () => {
     try {
 
       const response = await axios.post(
-        "http://127.0.0.1:8000/ai/chat",
+        `${API_URL}/ai/chat`,
         {
           message: text,
         }
@@ -332,7 +332,7 @@ const LogInteractionScreen = () => {
     try {
 
       const response = await axios.get(
-        "http://127.0.0.1:8000/hcp/search",
+        `${API_URL}/hcp/search`,
         {
           params: {
             doctor_name: doctorName,
@@ -399,7 +399,7 @@ const LogInteractionScreen = () => {
     try {
 
       const response = await axios.post(
-        "http://127.0.0.1:8000/ai/save-interaction",
+        `${API_URL}/ai/save-interaction`,
         interactionData
       );
 
