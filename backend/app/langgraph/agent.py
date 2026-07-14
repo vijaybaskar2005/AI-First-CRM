@@ -83,6 +83,8 @@ def process_search_interaction(state: AgentState):
     search_result = search_interaction(
         state["message"]
     )
+    print("Groq Search Result:", search_result)
+    print("User Message:", state["message"])
 
     if search_result["search_type"] != "doctor_name":
 
@@ -98,10 +100,12 @@ def process_search_interaction(state: AgentState):
 
     try:
 
+        doctor_name = search_result["value"]
+        print("Searching doctor:", doctor_name)
         interactions = (
             interaction_service.get_interactions_by_doctor_name(
                 db,
-                search_result["value"],
+                doctor_name,
             )
         )
 
