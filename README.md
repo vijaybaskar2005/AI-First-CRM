@@ -2,6 +2,7 @@
 
 An AI-powered Customer Relationship Management (CRM) system built for Medical Representatives (MRs) to efficiently log, manage, and review Healthcare Professional (HCP) interactions using natural language.
 
+
 Instead of manually filling lengthy forms, the Medical Representative simply chats with the AI Assistant. The LangGraph AI Agent understands the conversation, extracts the interaction details, fills the CRM form automatically, and provides intelligent recommendations.
 ---
 ## Live Demo
