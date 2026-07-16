@@ -15,8 +15,6 @@ https://github.com/vijaybaskar2005/AI-First-CRM
 ---
 # 📌 Project Overview
 
-This project was developed as part of the **AIVOA.AI Full Stack Developer (Python + React) Assignment**.
-
 The application combines:
 
 - React Frontend
