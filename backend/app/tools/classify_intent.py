@@ -31,6 +31,7 @@ Available tools:
 3. search_interaction
 4. generate_followup
 5. suggest_next_action
+6. generate_followup_email
 
 Examples:
 
